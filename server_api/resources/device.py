@@ -1,0 +1,1 @@
+# This file contains actions possible to be taken over the device resource
