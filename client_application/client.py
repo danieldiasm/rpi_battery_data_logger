@@ -1,0 +1,1 @@
+# This will contain the application that keeps pooling the server, posting the client status
