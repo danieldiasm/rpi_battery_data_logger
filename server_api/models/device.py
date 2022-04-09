@@ -1,1 +1,0 @@
-# This file contains the model for device to be used

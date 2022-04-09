@@ -24,6 +24,6 @@ class Status(Resource):
         pass
 
 class StatusList(Resource):
-    def get(self, name):
+    def get(self, device_name):
         # This should list all the statuses for his name (no pagination for now...)
         pass

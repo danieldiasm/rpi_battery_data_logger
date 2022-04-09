@@ -1,1 +1,4 @@
-# This file contains the model for status to be used
+from db import database
+
+class StatusModel(database.Model):
+    

@@ -1,8 +1,12 @@
+from __future__ import division
 from flask_restful import Resource, reqparse
+from itsdangerous import base64_encode
 
+# Devices
+devices = []
 class DeviceRegister(Resource):
     parser = reqparse.RequestParser()
-    parse_fields = ['device_type','device_model']
+    parse_fields = ['device_alias', 'device_model']
 
     for i in parse_fields:
         parser.add_argument(
@@ -14,9 +18,14 @@ class DeviceRegister(Resource):
     
     def post(self):
         data = DeviceRegister.parser.parse_args()
+        global devices
 
-        # TODO Insert logic for register a device on de DB, depends on Model logic
-        # Here goes the logic which lookup if the device is already 
-        # existent and refuses to create that again returning an error.
+        device_name = data['device_alias'] + "_" + str(base64_encode(data['device_alias'] + data['device_model']))
+        
+        # Check if it exists on DB
 
-        # Here goes the logic that creates the device and return the inserted data.
+        # Create if doesn't and return device name to be used later
+
+
+
+        
