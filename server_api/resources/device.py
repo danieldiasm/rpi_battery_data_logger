@@ -2,7 +2,7 @@ from flask_restful import Resource, reqparse
 
 class DeviceRegister(Resource):
     parser = reqparse.RequestParser()
-    parse_fields = ['device_name','device_type','device_model']
+    parse_fields = ['device_type','device_model']
 
     for i in parse_fields:
         parser.add_argument(
